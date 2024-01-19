@@ -1,0 +1,49 @@
+<?php
+
+declare(strict_types=1);
+namespace MySqlAntl4\Context;
+
+class ModuleAuthOptionContext extends UserAuthOptionContext
+{
+    public function __construct(UserAuthOptionContext $context)
+    {
+        parent::__construct($context);
+
+        $this->copyFrom($context);
+    }
+
+    public function userName(): ?UserNameContext
+    {
+        return $this->getTypedRuleContext(UserNameContext::class, 0);
+    }
+
+    public function IDENTIFIED(): ?TerminalNode
+    {
+        return $this->getToken(MySqlParser::IDENTIFIED, 0);
+    }
+
+    public function WITH(): ?TerminalNode
+    {
+        return $this->getToken(MySqlParser::WITH, 0);
+    }
+
+    public function authenticationRule(): ?AuthenticationRuleContext
+    {
+        return $this->getTypedRuleContext(AuthenticationRuleContext::class, 0);
+    }
+
+    public function enterRule(ParseTreeListener $listener): void
+    {
+        if ($listener instanceof MySqlParserListener) {
+            $listener->enterModuleAuthOption($this);
+        }
+    }
+
+    public function exitRule(ParseTreeListener $listener): void
+    {
+        if ($listener instanceof MySqlParserListener) {
+            $listener->exitModuleAuthOption($this);
+        }
+    }
+}
+

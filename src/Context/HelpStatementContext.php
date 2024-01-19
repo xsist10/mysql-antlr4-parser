@@ -1,0 +1,42 @@
+<?php
+
+declare(strict_types=1);
+namespace MySqlAntl4\Context;
+
+class HelpStatementContext extends ParserRuleContext
+{
+    public function __construct(?ParserRuleContext $parent, ?int $invokingState = null)
+    {
+        parent::__construct($parent, $invokingState);
+    }
+
+    public function getRuleIndex(): int
+    {
+        return MySqlParser::RULE_helpStatement;
+    }
+
+    public function HELP(): ?TerminalNode
+    {
+        return $this->getToken(MySqlParser::HELP, 0);
+    }
+
+    public function STRING_LITERAL(): ?TerminalNode
+    {
+        return $this->getToken(MySqlParser::STRING_LITERAL, 0);
+    }
+
+    public function enterRule(ParseTreeListener $listener): void
+    {
+        if ($listener instanceof MySqlParserListener) {
+            $listener->enterHelpStatement($this);
+        }
+    }
+
+    public function exitRule(ParseTreeListener $listener): void
+    {
+        if ($listener instanceof MySqlParserListener) {
+            $listener->exitHelpStatement($this);
+        }
+    }
+}
+
