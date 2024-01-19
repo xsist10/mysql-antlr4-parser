@@ -1,12 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
-
 namespace MySqlAntl4\Context;
 
 use Antlr\Antlr4\Runtime\ParserRuleContext;
-use MySqlAntl4\MySqlParser;
 
 class CreateTableContext extends ParserRuleContext
 {
@@ -26,3 +23,4 @@ class CreateTableContext extends ParserRuleContext
 
     }
 }
+

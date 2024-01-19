@@ -1,12 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
-
 namespace MySqlAntl4\Context;
 
-use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
-use MySqlAntl4\MySqlParserListener;
+use Antlr\Antlr4\Runtime\ParserRuleContext;
 
 class FullColumnNameExpressionAtomContext extends ExpressionAtomContext
 {
@@ -36,3 +33,4 @@ class FullColumnNameExpressionAtomContext extends ExpressionAtomContext
         }
     }
 }
+

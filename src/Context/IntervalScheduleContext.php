@@ -3,6 +3,8 @@
 declare(strict_types=1);
 namespace MySqlAntl4\Context;
 
+use Antlr\Antlr4\Runtime\ParserRuleContext;
+
 class IntervalScheduleContext extends ScheduleExpressionContext
 {
     /**

@@ -1,15 +1,9 @@
 <?php
 
 declare(strict_types=1);
-
-
 namespace MySqlAntl4\Context;
 
 use Antlr\Antlr4\Runtime\ParserRuleContext;
-use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
-use Antlr\Antlr4\Runtime\Tree\TerminalNode;
-use MySqlAntl4\MySqlParser;
-use MySqlAntl4\MySqlParserListener;
 
 class CreateRoleContext extends ParserRuleContext
 {
@@ -76,3 +70,4 @@ class CreateRoleContext extends ParserRuleContext
         }
     }
 }
+
