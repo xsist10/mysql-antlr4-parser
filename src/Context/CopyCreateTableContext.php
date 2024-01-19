@@ -1,10 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
-
 namespace MySqlAntl4\Context;
 
+use Antlr\Antlr4\Runtime\ParserRuleContext;
+use Antlr\Antlr4\Runtime\Token;
 use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
 use Antlr\Antlr4\Runtime\Tree\TerminalNode;
 use MySqlAntl4\MySqlParser;
@@ -85,3 +85,4 @@ class CopyCreateTableContext extends CreateTableContext
         }
     }
 }
+

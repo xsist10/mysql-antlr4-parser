@@ -1,11 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
-
 namespace MySqlAntl4\Context;
 
 use Antlr\Antlr4\Runtime\ParserRuleContext;
+use Antlr\Antlr4\Runtime\Token;
 use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
 use Antlr\Antlr4\Runtime\Tree\TerminalNode;
 use MySqlAntl4\MySqlParser;
@@ -36,15 +35,15 @@ class SqlStatementsContext extends ParserRuleContext
     }
 
     /**
-     * @return array<EmptyStatementContext>|EmptyStatementContext|null
+     * @return array<EmptyStatement_Context>|EmptyStatement_Context|null
      */
     public function emptyStatement_(?int $index = null)
     {
         if ($index === null) {
-            return $this->getTypedRuleContexts(EmptyStatementContext::class);
+            return $this->getTypedRuleContexts(EmptyStatement_Context::class);
         }
 
-        return $this->getTypedRuleContext(EmptyStatementContext::class, $index);
+        return $this->getTypedRuleContext(EmptyStatement_Context::class, $index);
     }
 
     /**
@@ -85,3 +84,4 @@ class SqlStatementsContext extends ParserRuleContext
         }
     }
 }
+

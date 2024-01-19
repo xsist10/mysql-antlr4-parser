@@ -10,6 +10,7 @@ use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
 use Antlr\Antlr4\Runtime\Tree\TerminalNode;
 use MySqlAntl4\MySqlParser;
 use MySqlAntl4\MySqlParserListener;
+
 class EmptyStatementContext extends ParserRuleContext
 {
     public function __construct(?ParserRuleContext $parent, ?int $invokingState = null)
