@@ -1,4 +1,15 @@
 {
+    "name": "cadfael/mysql-antlr4-parser",
+    "description": "A PHP based MySQL parser generated from Antlr (antlr.org).",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Thomas Shone",
+            "email": "xsist10@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
     "require": {
         "antlr/antlr4-php-runtime": "^0.9.1"
     },
