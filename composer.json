@@ -7,7 +7,10 @@
     },
     "autoload": {
         "psr-4": {
-            "MySqlAntl4\\" : "src/"
+            "MySqlAntl4\\": "src/"
         }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests"
     }
 }
